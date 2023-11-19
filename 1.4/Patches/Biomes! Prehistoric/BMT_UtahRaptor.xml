@@ -44,7 +44,8 @@
 							<label>huge utah raptor hide</label>
 							<graphicData>
 								<texPath>Resources/ScaleMedium</texPath>
-								  <color>(70,70,70)</color>
+								<graphicClass>Graphic_StackCount</graphicClass>
+								<color>(70,70,70)</color>
 							</graphicData>
 							<statBases>
 								<MarketValue>1008</MarketValue>
