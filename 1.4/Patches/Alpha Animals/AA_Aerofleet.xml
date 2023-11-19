@@ -1,0 +1,120 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseTiny">
+							<defName>DankPyon_Hide_Aerofleet</defName>
+							<label>tiny aerofleet hide</label>
+							<graphicData>
+								<color>(126,112,116)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>37.8</MarketValue>
+							</statBases>
+							<stackLimit>6</stackLimit>
+							<butcherProducts Inherit="False">
+								<AA_Leather_Aerofleet>14</AA_Leather_Aerofleet>
+							</butcherProducts>
+							<stuffProps>
+								<color>(108,157,177)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_Aerofleet"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>Teeth</bodyPartGroup>
+							<thing>DankPyon_Hide_Aerofleet</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseLarge">
+							<defName>DankPyon_Hide_CollosalAerofleet</defName>
+							<label>large aerofleet hide</label>
+							<graphicData>
+								<color>(126,112,116)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>108</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<AA_Leather_Aerofleet>40</AA_Leather_Aerofleet>
+							</butcherProducts>
+							<stuffProps>
+								<color>(126,112,116)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_ColossalAerofleet"]/lifeStages/li[1]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>Teeth</bodyPartGroup>
+							<thing>DankPyon_Hide_CollosalAerofleet</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseTiny">
+							<defName>DankPyon_Hide_AerofleetInfected</defName>
+							<label>tiny infected aerofleet hide</label>
+							<graphicData>
+								<color>(126,112,116)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>37.8</MarketValue>
+							</statBases>
+							<stackLimit>6</stackLimit>
+							<butcherProducts Inherit="False">
+								<AA_Leather_Aerofleet>14</AA_Leather_Aerofleet>
+							</butcherProducts>
+							<stuffProps>
+								<color>(108,157,177)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_InfectedAerofleet"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>Teeth</bodyPartGroup>
+							<thing>DankPyon_Hide_AerofleetInfected</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+				
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,98 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseHuge">
+							<defName>DankPyon_Hide_Gallatross</defName>
+							<label>huge gallatross hide</label>
+							<graphicData>
+								<color>(151,146,169)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>2592</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_Gallatross>180</Leather_Gallatross>
+							</butcherProducts>
+							<stuffProps>
+								<color>(151,146,169)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef [defName = "AA_Gallatross"]/lifeStages/li[3]/butcherBodyPart</xpath>
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_Gallatross</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef [defName = "AA_Gallatross"]</xpath>
+					<value>
+						<butcherProducts>
+							<AA_GallatrossHorn>1</AA_GallatrossHorn>
+						</butcherProducts>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseHuge">
+							<defName>DankPyon_Hide_GallatrossMoribund</defName>
+							<label>huge moribund gallatross hide</label>
+							<graphicData>
+								<color>(151,146,169)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>2592</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_Gallatross>180</Leather_Gallatross>
+							</butcherProducts>
+							<stuffProps>
+								<color>(151,146,169)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef [defName = "AA_GallatrossMoribund"]/lifeStages/li[3]/butcherBodyPart</xpath>
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_GallatrossMoribund</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef [defName = "AA_GallatrossMoribund"]</xpath>
+					<value>
+						<butcherProducts>
+							<AA_GallatrossHorn>1</AA_GallatrossHorn>
+						</butcherProducts>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

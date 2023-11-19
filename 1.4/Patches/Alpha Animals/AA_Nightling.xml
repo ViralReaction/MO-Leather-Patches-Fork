@@ -1,0 +1,50 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseLarge">
+							<defName>DankPyon_Hide_Nightling</defName>
+							<label>large nightling hide</label>
+							<graphicData>
+								<color>(10,10,10)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>89.1</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_Night>33</Leather_Night>
+							</butcherProducts>
+							<stuffProps>
+								<color>(10,10,10)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_Nightling"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_Nightling</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

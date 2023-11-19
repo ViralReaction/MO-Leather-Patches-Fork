@@ -1,0 +1,85 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseTiny">
+							<defName>DankPyon_Hide_DrainerLarva</defName>
+							<label>tiny drainer larva hide</label>
+							<graphicData>
+								<color>(126,112,116)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>21.6</MarketValue>
+							</statBases>
+							<stackLimit>6</stackLimit>
+							<butcherProducts Inherit="False">
+								<Leather_Chitin>8</Leather_Chitin>
+							</butcherProducts>
+							<stuffProps>
+								<color>(126,112,116)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_DrainerLarva"]/lifeStages/li[1]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_DrainerLarva</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseSmall">
+							<defName>DankPyon_Hide_Drainer</defName>
+							<label>small drainer hide</label>
+							<graphicData>
+								<color>(126,112,116)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>56.7</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_Chitin>21</Leather_Chitin>
+							</butcherProducts>
+							<stuffProps>
+								<color>(126,112,116)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_Drainer"]/lifeStages/li[1]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>Mouth</bodyPartGroup>
+							<thing>DankPyon_Hide_Drainer</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,86 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseTiny">
+							<defName>DankPyon_Hide_AngelMothLarva</defName>
+							<label>tiny angelmoth larva hide</label>
+							<graphicData>
+								<color>(126,112,116)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>21.6</MarketValue>
+							</statBases>
+							<stackLimit>6</stackLimit>
+							<butcherProducts Inherit="False">
+								<Leather_Chitin>8</Leather_Chitin>
+							</butcherProducts>
+							<stuffProps>
+								<color>(126,112,116)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_AngelMothLarva"]/lifeStages/li[1]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_AngelMothLarva</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseMedium">
+							<defName>DankPyon_Hide_AngelMoth</defName>
+							<label>medium angelmoth hide</label>
+							<graphicData>
+								<color>(126,112,116)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>72.9</MarketValue>
+							</statBases>
+							<stackLimit>4</stackLimit>
+							<butcherProducts Inherit="False">
+								<Leather_Chitin>27</Leather_Chitin>
+							</butcherProducts>
+							<stuffProps>
+								<color>(126,112,116)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_AngelMoth"]/lifeStages/li[1]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>Mouth</bodyPartGroup>
+							<thing>DankPyon_Hide_AngelMoth</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

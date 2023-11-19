@@ -1,0 +1,50 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseLarge">
+							<defName>DankPyon_Hide_FungalHusk</defName>
+							<label>large fungal husk hide</label>
+							<graphicData>
+								<color>(211,194,143)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>189</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_Human>50</Leather_Human>
+							</butcherProducts>
+							<stuffProps>
+								<color>(211,194,143)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_FungalHusk"]/lifeStages/li[1]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_FungalHusk</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

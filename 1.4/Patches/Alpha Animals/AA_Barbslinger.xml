@@ -1,0 +1,50 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseHuge">
+							<defName>DankPyon_Hide_Barbslinger</defName>
+							<label>huge barbslinger hide</label>
+							<graphicData>
+								<color>(126,112,116)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>202.5</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_Chitin>75</Leather_Chitin>
+							</butcherProducts>
+							<stuffProps>
+								<color>(126,112,116)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_Barbslinger"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>AA_Sting</bodyPartGroup>
+							<thing>DankPyon_Hide_Barbslinger</thing>
+							<allowFemale>True</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

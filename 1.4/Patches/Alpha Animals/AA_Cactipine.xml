@@ -1,0 +1,51 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseMedium">
+							<defName>DankPyon_Hide_Cactipine</defName>
+							<label>medium cactipine hide</label>
+							<graphicData>
+								<color>(162,175,90)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>113.4</MarketValue>
+							</statBases>
+							<stackLimit>4</stackLimit>
+							<butcherProducts Inherit="False">
+								<Leather_Cactus>28</Leather_Cactus>
+							</butcherProducts>
+							<stuffProps>
+								<color>(162,175,90)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_Cactipine"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>Teeth</bodyPartGroup>
+							<thing>DankPyon_Hide_Cactipine</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

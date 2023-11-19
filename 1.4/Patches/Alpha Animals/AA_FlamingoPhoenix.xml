@@ -1,0 +1,50 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseLarge">
+							<defName>DankPyon_Hide_FlamingoPhoenix</defName>
+							<label>large flamingo phoenix hide</label>
+							<graphicData>
+								<color>(76,83,99)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>38.88</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_Bird>24</Leather_Bird>
+							</butcherProducts>
+							<stuffProps>
+								<color>(76,83,99)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_FlamingoPhoenix"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_FlamingoPhoenix</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,50 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseSmall">
+							<defName>DankPyon_Hide_Devilsheep</defName>
+							<label>small devilsheep hide</label>
+							<graphicData>
+								<color>(76,83,99)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>39.69</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_Plain>21</Leather_Plain>
+							</butcherProducts>
+							<stuffProps>
+								<color>(76,83,99)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_DevilSheep"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_Devilsheep</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>

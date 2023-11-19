@@ -1,0 +1,51 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseMedium">
+							<defName>DankPyon_Hide_ChameleonYak</defName>
+							<label>medium chameleon yak hide</label>
+							<graphicData>
+								<color>(233,233,233)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>352.8</MarketValue>
+							</statBases>
+							<stackLimit>4</stackLimit>
+							<butcherProducts Inherit="False">
+								<Leather_Bluefur>28</Leather_Bluefur>
+							</butcherProducts>
+							<stuffProps>
+								<color>(233,233,233)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AA_ChameleonYak"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_ChameleonYak</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+		
+	</Operation>
+	
+</Patch>
