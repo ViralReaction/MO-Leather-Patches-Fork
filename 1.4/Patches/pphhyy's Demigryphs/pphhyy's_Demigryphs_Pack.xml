@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>pphhyy's Demigryphs</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>Medieval Overhaul</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<success>Normal</success>
+				<operations>
+					<!-- ======================================================ColdLeather Demigryph====================================================== -->
+					<li Class="PatchOperationAdd">
+						<xpath>Defs</xpath>
+						<value>
+							<ThingDef ParentName="DankPyon_HideBaseHuge">
+								<defName>DankPyon_Hide_ColdLeather_Demigryph</defName>
+								<label>huge cold demigryph hide</label>
+								<graphicData>
+									<texPath>Resources/ScaleHuge</texPath>
+									<color>(247,247,247)</color>
+								</graphicData>
+								<statBases>
+									<MarketValue>665</MarketValue>
+								</statBases>
+								<butcherProducts Inherit="False">
+									<pphhyy_coldLeather_Demigryph>95</pphhyy_coldLeather_Demigryph>
+								</butcherProducts>
+								<stuffProps>
+									<color>(247,247,247)</color>
+								</stuffProps>
+							</ThingDef>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/PawnKindDef [defName="pphhyy_LeopardDemigryph"]/lifeStages/li[3]</xpath>
+						<value>
+							<butcherBodyPart>
+								<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+								<thing>DankPyon_Hide_ColdLeather_Demigryph</thing>
+								<allowFemale>true</allowFemale>
+							</butcherBodyPart>
+						</value>
+					</li>
+					<!-- ======================================================WarmLeather Demigryph====================================================== -->
+					<li Class="PatchOperationAdd">
+						<xpath>Defs</xpath>
+						<value>
+							<ThingDef ParentName="DankPyon_HideBaseHuge">
+								<defName>DankPyon_Hide_WarmLeather_Demigryph</defName>
+								<label>huge warm demigryph hide</label>
+								<graphicData>
+									<texPath>Resources/ScaleHuge</texPath>
+									<color>(238,231,184)</color>
+								</graphicData>
+								<statBases>
+									<MarketValue>665</MarketValue>
+								</statBases>
+								<butcherProducts Inherit="False">
+									<pphhyy_WarmLeather_Demigryph>95</pphhyy_WarmLeather_Demigryph>
+								</butcherProducts>
+								<stuffProps>
+									<color>(238,231,184)</color>
+								</stuffProps>
+							</ThingDef>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/PawnKindDef [
+					defName="pphhyy_VultureDemigryph" or
+					defName="pphhyy_TigerDemigryph" or
+					defName="pphhyy_PantherDemigryph" or
+					defName="pphhyy_JadeDemigryph" or
+					defName="pphhyy_Daermigryph" or
+					defName="pphhyy_CheetahDemigryph"
+					]/lifeStages/li[3]						</xpath>
+						<value>
+							<butcherBodyPart>
+								<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+								<thing>DankPyon_Hide_WarmLeather_Demigryph</thing>
+								<allowFemale>true</allowFemale>
+							</butcherBodyPart>
+						</value>
+					</li>
+					<!-- ======================================================Leather Demigryph====================================================== -->
+					<li Class="PatchOperationAdd">
+						<xpath>Defs</xpath>
+						<value>
+							<ThingDef ParentName="DankPyon_HideBaseHuge">
+								<defName>DankPyon_Hide_Leather_Demigryph</defName>
+								<label>huge Demigryph hide</label>
+								<graphicData>
+									<texPath>Resources/ScaleHuge</texPath>
+									<color>(186,146,112)</color>
+								</graphicData>
+								<statBases>
+									<MarketValue>665</MarketValue>
+								</statBases>
+								<butcherProducts Inherit="False">
+									<pphhyy_Leather_Demigryph>95</pphhyy_Leather_Demigryph>
+								</butcherProducts>
+								<stuffProps>
+									<color>(186,146,112)</color>
+								</stuffProps>
+							</ThingDef>
+						</value>
+					</li>
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/PawnKindDef [
+					defName="pphhyy_Demigryph" or
+					defName="pphhyy_CrimsonDemigryph"
+					]/lifeStages/li[3]						</xpath>
+						<value>
+							<butcherBodyPart>
+								<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+								<thing>DankPyon_Hide_Leather_Demigryph</thing>
+								<allowFemale>true</allowFemale>
+							</butcherBodyPart>
+						</value>
+					</li>
+				</operations>
+			</match>
+		</match>
+	</Operation>
+</Patch>
