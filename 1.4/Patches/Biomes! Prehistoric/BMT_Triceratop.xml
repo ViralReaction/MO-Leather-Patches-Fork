@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biomes! Prehistoric</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- Triceratops MO Pelt -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/PawnKindDef[defName="BMT_Triceratops"]/lifeStages/li[3]/butcherBodyPart</xpath>
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_BMT_Triceratops</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="BMT_Triceratops"]</xpath>
+					<value>
+						<li Class="DankPyon.AdditionalButcherProducts">
+							<butcherOptions>
+								<li>
+									<thingDef>BMT_CeratopsidHorn</thingDef>
+									<amount>1</amount>
+									<chance>100</chance>
+								</li>
+							</butcherOptions>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseHuge">
+							<defName>DankPyon_Hide_BMT_Triceratops</defName>
+							<label>huge triceratops hide</label>
+							<graphicData>
+								<texPath>Resources/ScaleHuge</texPath>
+								  <color>(107,123,156)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>1008</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<BMT_DinoHideHeavy>120</BMT_DinoHideHeavy>
+							</butcherProducts>
+							<stuffProps>
+								   <color>(107,123,156)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+</Patch>
