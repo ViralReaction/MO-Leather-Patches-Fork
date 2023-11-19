@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anima Animals - Community Pack (temp)[HH]</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="DankPyon_HideBaseHuge">
+							<defName>DankPyon_Hide_AnimaBear</defName>
+							<label>Huge anima bear hide</label>
+							<graphicData>
+								<texPath>Resources/HeavyFurHuge</texPath>
+								<color>(174,202,176)</color>
+							</graphicData>
+							<statBases>
+								<MarketValue>1161</MarketValue>
+							</statBases>
+							<butcherProducts Inherit="False">
+								<Leather_AnimaBear>128</Leather_AnimaBear>
+							</butcherProducts>
+							<stuffProps>
+								<color>(174,202,176)</color>
+							</stuffProps>
+						</ThingDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/PawnKindDef [defName="AnimaBear"]/lifeStages/li[3]</xpath>
+
+					<value>
+						<butcherBodyPart>
+							<bodyPartGroup>HeadAttackTool</bodyPartGroup>
+							<thing>DankPyon_Hide_AnimaBear</thing>
+							<allowFemale>true</allowFemale>
+						</butcherBodyPart>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
